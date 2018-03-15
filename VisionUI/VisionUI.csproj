@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A8FE202-4BD6-43A2-A450-90B4034C6BA1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisionUI</RootNamespace>
+    <AssemblyName>VisionUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\..\MVTec\HALCON-12.0\bin\dotnet35\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppValue.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modle\SetImg\frmSetImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modle\SetImg\frmSetImg.Designer.cs">
+      <DependentUpon>frmSetImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetSys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetSys.Designer.cs">
+      <DependentUpon>frmSetSys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modle\Cam\frmCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modle\Cam\frmCam.Designer.cs">
+      <DependentUpon>frmCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modle\Cam\frmCamName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modle\Cam\frmCamName.Designer.cs">
+      <DependentUpon>frmCamName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Modle\SetImg\frmToolBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modle\SetImg\frmToolBox.Designer.cs">
+      <DependentUpon>frmToolBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolBoxEventArgs.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modle\SetImg\frmSetImg.resx">
+      <DependentUpon>frmSetImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetSys.resx">
+      <DependentUpon>frmSetSys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modle\Cam\frmCam.resx">
+      <DependentUpon>frmCam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modle\Cam\frmCamName.resx">
+      <DependentUpon>frmCamName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Modle\SetImg\frmToolBox.resx">
+      <DependentUpon>frmToolBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CamCommon\CamCommon.csproj">
+      <Project>{cd1138d8-e6d9-4a50-8d69-3c50d6f6156a}</Project>
+      <Name>CamCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamFile\CamFile.csproj">
+      <Project>{d1e08f6a-9f67-4bd8-b8fc-cec92abd9b69}</Project>
+      <Name>CamFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chloe.SQLite\Chloe.SQLite.csproj">
+      <Project>{a89888e2-7ee1-4490-b860-d6dbf5601958}</Project>
+      <Name>Chloe.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chloe\Chloe.csproj">
+      <Project>{251cae99-2279-4b09-afe1-123c69030457}</Project>
+      <Name>Chloe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImgProcess\ImgProcess.csproj">
+      <Project>{7e06c2ca-fd55-49be-a865-43639c4256d4}</Project>
+      <Name>ImgProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoginControl\LoginControl.csproj">
+      <Project>{450edcf1-9ec4-426c-b634-250b60b17070}</Project>
+      <Name>LoginControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogRecord\LogRecord.csproj">
+      <Project>{26b8916b-e463-40a9-925b-3abcfdcd08b1}</Project>
+      <Name>LogRecord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SelectionLanguage\SelectionLanguage.csproj">
+      <Project>{8255004b-940a-4da4-8159-5cd6b43f55e5}</Project>
+      <Name>SelectionLanguage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLiteConfig\DataBaseConfig.csproj">
+      <Project>{f9563a3b-9e39-4926-a1f7-e1a36a113420}</Project>
+      <Name>DataBaseConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolBox\ToolBoxControl.csproj">
+      <Project>{57f6221d-1b7e-4a43-b31c-084a3f01edcd}</Project>
+      <Name>ToolBoxControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VisionTools\VisionTools.csproj">
+      <Project>{5f59f145-fa27-42a7-8d5b-105733e7e084}</Project>
+      <Name>VisionTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\ThemeVS2015.csproj">
+      <Project>{007d4ac8-948f-4816-86ad-b9d1343672c1}</Project>
+      <Name>ThemeVS2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\ToolboxWindow.ico" />
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

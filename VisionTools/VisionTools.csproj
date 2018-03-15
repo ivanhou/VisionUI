@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F59F145-FA27-42A7-8D5B-105733E7E084}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisionTools</RootNamespace>
+    <AssemblyName>VisionTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataGridViewNumericUpDownElements, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\DataGridViewNumericUpDownElements.dll</HintPath>
+    </Reference>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\..\MVTec\HALCON-12.0\bin\dotnet35\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithm\frmSetAlgorithm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algorithm\frmSetAlgorithm.Designer.cs">
+      <DependentUpon>frmSetAlgorithm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppValue.cs" />
+    <Compile Include="CheckROI\frmSetCheckROI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckROI\frmSetCheckROI.Designer.cs">
+      <DependentUpon>frmSetCheckROI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckROI\Model\CheckRoiConfig.cs" />
+    <Compile Include="Match\frmSetMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Match\frmSetMatch.Designer.cs">
+      <DependentUpon>frmSetMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Match\Matching.cs" />
+    <Compile Include="Match\MatchingResualArgs.cs" />
+    <Compile Include="Match\Model\CreatModelParameter.cs" />
+    <Compile Include="Match\Model\FindModelParameter.cs" />
+    <Compile Include="Match\Model\MatchingConfig.cs" />
+    <Compile Include="Match\Model\MatchingResual.cs" />
+    <Compile Include="SerializeHelper.cs" />
+    <Compile Include="PublicMethod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Algorithm\frmSetAlgorithm.resx">
+      <DependentUpon>frmSetAlgorithm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckROI\frmSetCheckROI.resx">
+      <DependentUpon>frmSetCheckROI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Match\frmSetMatch.resx">
+      <DependentUpon>frmSetMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ViewROI\ViewWindow.csproj">
+      <Project>{99eca0e8-b420-4645-979d-224f135286be}</Project>
+      <Name>ViewWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libs\DataGridViewNumericUpDownElements.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

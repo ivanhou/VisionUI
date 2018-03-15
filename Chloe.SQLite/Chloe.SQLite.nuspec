@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Chloe.SQLite</id>
+    <version>2.6.0</version>
+    <title>Chloe.SQLite</title>
+    <authors>Shuxin Qin</authors>
+    <owners>Shuxin Qin</owners>
+    <licenseUrl>https://github.com/shuxinqin/Chloe/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/shuxinqin/Chloe</projectUrl>
+    <iconUrl>http://images.cnblogs.com/cnblogs_com/so9527/860154/o_ORMicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+A lightweight and high-performance Object/Relational Mapping(ORM) library.
+
+Requires:
+- .NET Framework(>=4.0)
+- Chloe(>=2.6.0)
+    </description>
+    <copyright>Copyright 2016-2017</copyright>
+    <tags>Chloe,ORM,Data,SQLite</tags>
+  </metadata>
+
+  <files>
+    <file src="bin\Release\Chloe.dll" target="lib\net40" />
+    <file src="bin\Release\Chloe.SQLite.dll" target="lib\net40" />
+  </files>
+</package>
